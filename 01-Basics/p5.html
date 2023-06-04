@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+    <style>
+        table, th, td{
+            background-color: lightgray;
+            border: 2px solid gray;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1>Condition Statements..!</h1>
+    </center>
+
+    <hr>
+
+    <ol>
+        <li>Simple if</li>
+        <li>If Else</li>
+        <li>If Else Ladder</li>
+        <li>Switch Case</li>
+    </ol>
+    <hr>
+
+    <table>
+        <tr>
+            <td><label for="">Enter First Number</label></td>
+            <td><input type="text" name="firstNumber" id="firstNumber" placeholder="FirstNumber"></td>
+        </tr>
+        <tr>
+            <td><label for="">Enter your Second Number</label></td>
+            <td> <input type="text" name="secondNumber" id="secondNumber" placeholder="SecondNumber"></td>
+            
+        </tr>
+        <tr>
+            <td><label>Entre Your Third Number</label></td>
+            <td><input type="text" name="secondNumber" id="thirdNumber" placeholder="ThirdNumber"></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="textCondition()">Result</button></td>
+            <td><p id="result"></p></td>
+        </tr>
+    </table>
+
+   
+  
+    <script>
+        function textCondition(){
+            let firstNumber  = parseInt(document.getElementById('firstNumber').value);
+            let secondNumber = +document.getElementById('secondNumber').value;
+            let thirdNumber = +document.getElementById('thirdNumber').value;
+            console.log(typeof(thirdNumber));
+
+            if (firstNumber == secondNumber == thirdNumber){
+                document.getElementById("result").innerHTML = " Number are equal.!";
+             } else if(firstNumber > secondNumber && firstNumber > thirdNumber){
+                document.getElementById("result").innerHTML = "First Number is big..!";
+             } else if(firstNumber < secondNumber && secondNumber > thirdNumber) {
+                document.getElementById("result").innerHTML = "Second Number is big..!";
+             } else if(firstNumber < thirdNumber && secondNumber < thirdNumber){
+                document.getElementById("result").innerHTML = "Third number is big";
+            }else{
+                    document.getElementById("result").innerHTML =  "Your are entered wrong number"
+        }
+            // let message = firstNumber > secondNumber ? "condition is true" :
+            // "condition is not true";
+
+            document.write(message);
+        }
+        // textCondition() 
+    </script>
+</body>
+</html>

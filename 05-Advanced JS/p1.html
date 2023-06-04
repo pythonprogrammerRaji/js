@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <center>
+        <h1>WINDOW</h1>
+    </center>
+    <hr>
+
+    <script>
+        let kiran = 100; //Global Variable or window.kiran
+
+        function WhoisThis(){
+            let kiran = 200;  // Local Variable
+            let gokul = 500;
+            window.laxmi = 300;
+
+            alert("Local Variable :" + kiran); 
+            alert("Local Variable :" + gokul); 
+            alert("Global Variable :" + this.kiran); 
+            alert("Global Variable :" + laxmi); 
+
+        }
+        WhoisThis();
+
+        function whoamI(){
+            document.write("This is whiamI function : " + laxmi);
+        }
+        whoamI();
+    </script>
+</body>
+</html>

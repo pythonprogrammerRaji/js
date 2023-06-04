@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       button{
+        padding: 5px;
+        background-color: red;
+        margin: 10px;
+       }
+       button:nth-child(1){
+        background-color: aqua;
+        padding: 5px;
+        width: 60px;
+       }
+       button:nth-child(2){
+        margin-top: -20px;
+        margin-right: -50px;
+       }
+      
+    </style>
+</head>
+<body>
+    <h1>JAVASCRIPT OBJECT</h1>
+    <pre>
+        1. By Object literal
+        2. By creating instance of Object directly (using new keyword)
+        3. By using an object constructor (using new keyword)
+    </pre>
+    <hr>
+
+    <h2>By object literal</h2>
+    <p><strong>Syntax :</strong></p>
+
+    <pre>
+        let literalObjectName = {
+            "property1":"value1",
+            "property2":"value2",
+            "property3":"value3",
+            "propertyN":"valueN",
+           
+        };
+
+        console.log(literalObjectName);
+        console.log(typeof(literalObjectName));
+        console.log(literalObjectName.property1);
+    </pre>
+    <script>
+        let empDetails1 = [
+            {
+            "id":1,
+            "firstName":"Kavya",
+            "lastName":"Shree",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[9876543210, 1234568890],
+            "address":{"local":"Bangalore", "per":"Mysore"},
+            "pinCode":560079,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":2,
+            "firstName":"Vani",
+            "lastName":"Shree",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[9876543310, 1234577890],
+            "address":{"local":"Manday", "per":"Mangalore"},
+            "pinCode":560078,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":3,
+            "firstName":"Bindhu",
+            "lastName":"Shree",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[1234543210, 9879568890],
+            "address":{"local":"Bangalore", "per":"Mysore"},
+            "pinCode":560077,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":4,
+            "firstName":"prama",
+            "lastName":"Swapna",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[7493243210, 1234566457],
+            "address":{"local":"Bangalore", "per":"Mysore"},
+            "pinCode":560076,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":5,
+            "firstName":"Rajeshwari",
+            "lastName":"Raji",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[9019219876, 8971009113],
+           
+            "address":{"local":"Bangalore", "per":"Rayadhurg"},
+            "pinCode":560075,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":6,
+            "firstName":"Bhoomi",
+            "lastName":"Shree",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[3456781920, 9102453678],
+            "address":{"local":"Dhevanahalli", "per":"Ballari"},
+            "pinCode":560074,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":7,
+            "firstName":"Anu",
+            "lastName":"Radha",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[9783900134, 1234432154],
+            "address":{"local":"Thirapathi", "per":"Rayadhurg"},
+            "pinCode":560074,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":8,
+            "firstName":"Appu",
+            "lastName":"Roopa",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[6748920415, 6738910234],
+            "address":{"local":"Hirellahal", "per":"Hunli"},
+            "pinCode":560073,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":9,
+            "firstName":"Priya",
+            "lastName":"Nishadh",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[9536782910, 7864969264],
+            "address":{"local":"Dhoddaballapur", "per":"UttarPradhesh"},
+            "pinCode":560072,
+            "photo":"assests/image/bala.jpg"
+        },
+        {
+            "id":10,
+            "firstName":"Chandu",
+            "lastName":"Gowda",
+            "fullName":function(){
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile":[6478901232, 5467819203],
+            "address":{"local":"Varangal", "per":"Kadapa"},
+            "pinCode":560071,
+            "photo":"assests/image/bala.jpg"
+        }
+    ];
+        
+        console.log(typeof empDetails1);
+        console.log(empDetails1);
+        console.log(empDetails1.id);
+        console.log(empDetails1.firstName);
+        console.log(empDetails1.lastName);
+        console.log(empDetails1.fullName());
+        console.log(empDetails1.mobile);
+        console.log(empDetails1.mobile);
+        console.log(empDetails1.mobile);
+        console.log(empDetails1.pinCode);5
+        console.log(empDetails1.address);
+        console.log(empDetails1.address.local);
+        console.log(empDetails1.address.per);
+        console.log(empDetails1.photo);
+
+    
+   
+    </script>  
+
+    <script>
+        document.write("<table border='1' cellpadding ='10'>");
+            document.write("<tr>");
+                document.write("<th> typeof Emp id</th>");
+                document.write("<th> First Name</th>");
+                document.write("<th> Last Name </th>");
+                document.write("<th> Full Name</th>");
+                document.write("<th> Mobile Number </th>");
+                document.write("<th> Alt Mobile Number 0</th>");
+                document.write("<th> Alt Mobile Number 1</th>");
+                document.write("<th> Local Address </th>");
+                document.write("<th> per Address</th>");
+                document.write("<th> PinCode </th>");
+                document.write("<th> Emp Photo</th>");
+                document.write("<th> Option</th>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+                for (let i = 0; i < empDetails1.length; i++) {
+                document.write("<td>"+ empDetails1[i].id +"</td>");
+                document.write("<td>"+ empDetails1[i].firstName +"</td>");
+                document.write("<td>"+ empDetails1[i].lastName +"</td>");
+                document.write("<td>"+ empDetails1[i].fullName() +"</td>");
+                document.write("<td>"+ empDetails1[i].mobile +"</td>");
+                document.write("<td>"+ empDetails1[i].mobile[0] +"</td>");
+                document.write("<td>"+ empDetails1[i].mobile[1] +"</td>");
+                document.write("<td>"+ empDetails1[i].address.local +"</td>");
+                document.write("<td>"+ empDetails1[i].address.per +"</td>");
+                document.write("<td>"+ empDetails1[i].pinCode +"</td>");
+                document.write("<td>"+ "<img height='100' width='100' border-radius:'100px' border:'2px' src="+empDetails1[i].photo +">"+"</td>");
+                document.write("<td><button>Edit</button><button>Remove</button></td>");
+            document.write("</tr>");
+       
+        }
+        document.write("</table>");
+    </script>
+            
+   
+           
+        
+    
+  
+</body>
+</html>

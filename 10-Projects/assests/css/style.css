@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: url(../image/flower.jpg)no-repeat center;
+    background-size: 100%;
+}
+section>div{
+    display: block;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgba(245, 240, 240, 0.755);
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
+section>div>h1{
+    color: #fff;
+    text-shadow: 3px 3px 3px #000;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+
+}
+section>div>input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 0.5px solid transparent;
+    transition: 2s;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+section>div>input:focus{
+  border: 2px solid #000;
+}
+button{
+    width: 100%;
+    padding: 20px 40px;
+    border: none;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s all ease-in-out;
+
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.24);
+    color: #fff;
+}
+table, td{
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+
+
+

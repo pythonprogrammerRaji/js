@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+</head>
+<body>
+    <center>
+        <h1>ONSELECT, ONCOPY, ONCUT, ONPASTE</h1>
+    </center>
+    <input type="text" id="demo" value="Hello World" onselect="print()">
+    <h3 id="output"></h3>
+    <script>
+        function print(){
+            document.getElementById("output").innerHTML = "text coped";
+        }
+    </script>
+</body>
+</html>

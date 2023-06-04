@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Onsubmit and Onreset</h1>
+    </center>
+    <hr>
+    <h3 id="output"></h3>
+
+    <form onsubmit="subHandler(event)" onreset="resetHandler()"  >
+       <label for="">Username</label>
+       <input type="text" name="user" id="user">
+       <br><br>
+
+        <label for="">password</label>
+        <input type="password" name="pass" id="pass">
+        <br><br>
+
+        <button type="submit">Login</button>
+        <input type="reset" value="Reset">
+        <br><br>
+
+
+
+    </form>
+
+    <script>
+        function subHandler(event){
+            event.preventDefault();  // to avoid the page refresh
+
+            let user = document.getElementById("user").value;
+            let pass = document.getElementById("pass").value;
+
+            document.getElementById("output").innerHTML = `username = ${user} and password = ${pass}`;
+        }
+        function resetHandler(){
+            alert("Reset Event trigged");
+        }
+    </script>
+</body>
+</html>

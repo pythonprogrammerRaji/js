@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+    </center>
+    <hr>
+
+    <script>
+        function Student() {
+            let name, gender;
+
+            this.name ="Be practical";
+            this.gender = "Male";
+        }
+        let stud = new Student();
+        document.write("<b>Student.prototype : </b>" + Student.prototype + "<br><br>"); //Object
+
+        document.write("<b>stud.prototype : </b>" + stud.prototype + "<br><br>"); // undefined
+
+        document.write("<b>stud._proto_ : </b>" + stud._proto_ + "<br><br>"); //Object
+
+        document.write("<b>typeof Student.prototype : </b>" + typeof Student.prototype + "<br<br>");
+        document.write("<b>typeof stud._proto_ : </b>" + typeof stud._proto_ + "<br><br>");
+
+        document.write("<b>Object.keys : </b>" + Object.keys(stud) + "<br><br>"); //Retrive all the properties name for the properties
+    </script>
+</body>
+</html>

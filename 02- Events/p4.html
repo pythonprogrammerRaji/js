@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+    <style>
+        div{
+            background-color: teal;
+            color: white;
+            padding: 20px;
+            width: 50%;
+            height: 500px;
+            overflow: auto;
+        }
+        h4{
+            padding: 10px;
+            background-color: crimson;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+  
+        <h1>onmousewheel</h1>
+
+        <h4 id="output"></h4>
+
+        <div id="txt" onmousewheel="wheelHandler()" onscroll="wheelHandler()">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, enim repellat nam labore ad repudiandae non consectetur voluptate et! Nam praesentium minus laudantium tempore quo nesciunt voluptates obcaecati quis eaque.</p>
+        </div>
+        <script>
+            function wheelHandler(){
+                document.getElementById("output").innerHTML = document.getElementById("txt").scrollTop + " px";
+            }
+        </script>
+           
+
+</body>
+</html>

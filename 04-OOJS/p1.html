@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    
+</head>
+<body>
+    <h1>JAVASCRIPT OBJECT</h1>
+    <pre>
+        1. By Object literal
+        2. By creating instance of Object directly (using new keyword)
+        3. By using an object constructor (using new keyword)
+    </pre>
+    <hr>
+
+    <h2>By object literal</h2>
+    <p><strong>Syntax :</strong></p>
+
+    <pre>
+        let literalObjectName = {
+            "property1":"value1",
+            "property2":"value2",
+            "property3":"value3",
+            "propertyN":"valueN",
+           
+        };
+
+        console.log(literalObjectName);
+        console.log(typeof(literalObjectName));
+        console.log(literalObjectName.property1);
+    </pre>
+
+
+    <script>
+        let empDetails = {
+            "id":[1,2,3,4,5,6,7,8,9,10],
+            "firstName":["Deeksha","Kavya","Shree","prema","Suma","Bindhu","Likhitha","Anu","priya","keerthana",],
+            "lastName":["Panitha","Shree","Vani","Gowda","Latha","Shree","Gowda","Pallavi","Nishadh","Ammu",],
+            "fullName":function(){
+                return this.firstName+ " " + this.lastName;
+            },
+            "mobile":[[9876543210, 9865331420],
+                    [1234567890, 3425167823],
+                    [5600697843, 3456890122],
+                    [1234455665, 9988776655],
+                    [1122334455, 7766554433],
+                    [9019290876, 8971009113],
+                    [7981556754, 8845627913],
+                    [9019243567, 8971886754],
+                    [98765043451, 2345167891],
+                    [9089542671, 2351467981]],
+
+            "pincode":[560079,
+                    560078,
+                    560077,
+                    560076,
+                    560075,
+                    560074,
+                    560073,
+                    560072,
+                    560071,
+                    560070],
+
+                    
+            "address":
+            {"local":["Bengalore","Mysore","Turupathi","Chenaai","chikkaballapur","Guthi","Mandya","Hassan","ballari","Gowribidhanuru"],
+             "per":["Rayadhurg","Summanahalli","Rajamandri","Thiruvanthampuram","Kothi","Utharpradhesh","Vijayavada","Hubli","Pavagada","Dhodaballapuraa"]}, 
+
+
+
+            "photo":["assets/image/image1.jpg",
+
+                    "assets/image/image2.jpg",
+
+                    "assets/image/image3.jpg",
+                    "assets/image/image.jpg",
+                    "assets/image/image4.jpg",
+                    "assets/image/flowers1.jpg",
+                    "assets/image/flowers2.jpg",
+                    "assets/image/flowers3.jpg",
+                    "assets/image/flowers4.jpg",
+                    "assets/image/flowers5.jpg",]
+            
+
+            
+        };
+
+        console.log(typeof empDetails);
+        console.log(empDetails);
+        console.log(empDetails.id);
+        console.log(empDetails.firstName);
+        console.log(empDetails.lastName);
+        console.log(empDetails.fullName());
+        console.log(empDetails.mobile);
+        console.log(empDetails.mobile[0]);
+        console.log(empDetails.mobile[1]);
+        console.log(empDetails.pincode);
+        console.log(empDetails.address);
+        console.log(empDetails.address.local);
+        console.log(empDetails.address.per);
+        console.log(empDetails.photo);
+
+</script>
+<script>
+    document.write("<table border='1' cellpadding ='10'>");
+        document.write("<tr>");
+            document.write("<th> typeof Emp id</th>");
+            document.write("<th> First Name</th>");
+            document.write("<th> Last Name </th>");
+            document.write("<th> Full Name</th>");
+            document.write("<th> Mobile Number </th>");
+            document.write("<th> Alt Mobile Number0</th>");
+            document.write("<th> Alt Mobile Number1</th>");
+            document.write("<th> Local Address </th>");
+            document.write("<th> per Address</th>");
+            document.write("<th> Pincode </th>");
+            document.write("<th> Emp Photo</th>");
+            document.write("<th> Option</th>");
+        document.write("</th>");
+        for(let i=0; i<=10; i++){
+
+        document.write("<tr>");
+            document.write("<td>"+ empDetails.id[i] +"</td>");
+            document.write("<td>"+ empDetails.firstName[i] +"</td>");
+            document.write("<td>"+ empDetails.lastName [i]+"</td>");
+            document.write("<td>"+  empDetails.fullName(empDetails.firstName[i], empDetails.lastName[i]) +"</td>");
+            document.write("<td>"+  empDetails.mobile [i]+ "</td>");
+            document.write("<td>"+  empDetails.mobile[0][i] +"</td>");
+            document.write("<td>"+  empDetails.mobile[1][i] +"</td>");
+            document.write("<td>"+ empDetails.address.local[i] +"</td>");
+            document.write("<td>"+ empDetails.address.per [i]+"</td>");
+            document.write("<td>"+  empDetails.pincode [i]+ "</td>");
+            document.write("<td>"+ "<img height='100' width='100' scr="+empDetails.photo[i]+">"+"</td>");
+            document.write("<td><button>Edit</button>,<button>Remove</button></td>" );
+        document.write("</tr>");
+    }
+       
+    document.write("</table>");
+
+</script>
+    
+</body>
+</html>

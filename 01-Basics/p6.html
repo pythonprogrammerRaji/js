@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<sec>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td{
+        border: 1px solid dimgray;
+    }
+    td{ padding: 20px;}
+    table{
+        background-color: lightgray;
+    }
+</style>
+<body>
+    <center>
+        <h3>Switch Case..!</h3>
+    </center>
+    <hr>
+
+    <table>
+        <tr>
+            <td><label for="">Enter Number in between:</label></td>
+            <td><input type="number" id="number" placeholder="Number between 1-7"</td>
+            <td><button type="button" id="btn">Result</button></td>
+        </tr>
+    </table>
+    <script>
+        function switchCase() {
+            let number = +document.getElementById("number").value;
+            switch (number) {
+            case 1 : alert("Today is Sunday");
+                break;
+            case 2 : alert("Today is Monday");
+                break;
+            case 3 : alert("Today is Tuesday");
+                break;
+            case 4 : alert("Today is Wednesday");
+                break;
+            case 5 : alert("Today is Thursday");
+                break;
+            case 6 : alert("Today is Friday");
+                break;
+            case 7 : alert("Today is Saturday");
+                break;
+            default: alert("No Information for the day");
+                break;
+            }
+
+        }
+        document.getElementById("btn").onclick = switchCase;
+    </script>
+</body>
+</html>

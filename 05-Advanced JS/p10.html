@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>SET</h1>
+    </center>
+    <hr>
+
+    <script>
+        let emp = new Set();
+        emp.add("Raji");
+        emp.add("Likhitha");
+        emp.add("Kerrthana");
+        emp.add("Ashu");
+        emp.add("Kavya");
+
+        emp.add("Kavya");
+
+        console.log('set =',emp.entries());
+
+        emp.forEach(function(item){
+            document.write(`<h3> ${item} </h3>`);
+        });
+
+        // has()
+        console.log("has('Kavya') = ", emp.has('Kavya'));//true
+        console.log("has('Peethi') = ", emp.has('peethi'));//false
+
+        emp.delete("Kavya");  //delete set
+
+        console.log('after delete = ',emp.entries());
+        console.log("has('Kavya') = ", emp.has('Kavya'));
+
+    </script>
+</body>
+</html>

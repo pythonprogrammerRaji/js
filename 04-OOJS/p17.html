@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Inheritance in constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        function Car(name) {
+            this.name = name;
+        }
+
+        /* any property externally */
+        Car.prototype.display = function () {
+            document.write(`<h3> Car name is ${ this.name } </h3> `);
+        }
+        
+        function Bus(name) {
+            this.name = name;
+        }
+
+        Bus.prototype.display1 = function () {
+            document.write(`<h3> bus name is ${ this.name } </h3> `);
+        }
+
+       // Bus.prototype = new Car();
+       let c = new Car("Indica");
+       Bus.prototype.proto = c;
+
+       let x = new Bus("Tata");
+       x.display1();
+       x.display();
+        
+    </script>
+</body>
+</html>

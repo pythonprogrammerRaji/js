@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Prototype</h1>
+    </center>
+    <hr>
+    <script>
+        function Course(){}
+
+        Course.prototype.title = "javascript";
+        Course.prototype.getTitle = ()=>{
+            document.write(` <h3>Function = ${this.title}</h3>`);
+            /* this pointer not allowed in arrow function */
+        };
+         
+        let c = new Course();
+        document.write(`<h3> ${ c.title } </h3>` );
+        c.getTitle();
+    </script>
+</body>
+</html>
